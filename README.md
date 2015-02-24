@@ -8,14 +8,18 @@ Gli esercizi vengono raccolti nella omonima cartella.
 
 Ogni esercizo deve essere sitemato in un unico file con un nome che indichi la data dell'esame, il numero dell'esercizion con indicato nella raccolta degli esercizi e la sigla dell'autore.
 
-Es. 2015_02_02-01b-MT
+Es. 2015_02_02-01b-MT.tex
 
 Specificando l'autore sono così ammesse più soluzioni.
 
 Il documento ha un file principale in cui verranno inclusi tutti gli esercizi.
 Sarà così possibile produrre documenti con ordinamento degli eserchzzi differenti.
 
-# Aggiungere un esercizio
+# Partecipare
+
+Aggiunti il tuo nome alla lista delle persone.
+
+## Aggiungere un esercizio
 
 1. Creare il proprio branch di lavoro.
 - Creare il file dell'esercizio che si vuole svolgere.
