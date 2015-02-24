@@ -2,6 +2,8 @@
 
 \subsection[01b MT]{Esercizio 01b Marco Turchetto}
 
+a) Risolvere:
+
 \begin{equation}
 	T(n)=\begin{cases}
 		\BigTheta{1}							            & \text{se $n \leq 1$}.\\
@@ -22,4 +24,24 @@
 	T(n) &= \BigTheta{\log _4 n} 2^{3 \log_4 n} & k= \log_4 n \\ 
 	     &= c \log _4 n \ 2^{\log_4 n} \ 2 ^ {2 \log _ 4 n} \\
 	     &= \BigTheta{n \sqrt{n} \log_4 n}
+\end{align*}
+
+b) Dimostrare:
+\begin{equation*}
+\left.
+	\begin{aligned}
+		g(n) &= n \sqrt{n}(\log n) \\
+		f(n) &= n^3
+	\end{aligned}
+\right \} \Rightarrow  g(n) \in \BigO{f(n)} 
+\end{equation*}
+
+Nota la seguente regola
+\begin{equation*}
+	\lim _{x \to \infty} \frac{f(x)}{g(x)} = \infty \Rightarrow g(x) \in \BigO{f(x)}
+\end{equation*}
+
+E' facile dimostrare
+\begin{align*}
+	\lim _{n \to \infty} \frac{n^3}{n \sqrt{n}(\log n)} = \lim _{n \to \infty} \frac{\sqrt{n}}{ \log n} = \infty \Rightarrow g(x) \in \BigO{f(x)}
 \end{align*}
