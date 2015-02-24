@@ -5,11 +5,25 @@ Raccolta di esami svolti per il corso di Algoritmi e Strutture Dati dell'Univers
 
 La lista degli esercizi è quella sul sito del docente del corso.
 Gli esercizi vengono raccolti nella omonima cartella.
+
 Ogni esercizo deve essere sitemato in un unico file con un nome che indichi la data dell'esame, il numero dell'esercizion con indicato nella raccolta degli esercizi e la sigla dell'autore.
 
 Es. 2015_02_02-01b-MT
 
 Specificando l'autore sono così ammesse più soluzioni.
+
+Il documento ha un file principale in cui verranno inclusi tutti gli esercizi.
+Sarà così possibile produrre documenti con ordinamento degli eserchzzi differenti.
+
+# Aggiungere un esercizio
+
+1. Creare il proprio branch di lavoro.
+- Creare il file dell'esercizio che si vuole svolgere.
+- Svolgere l'esercizio.
+- Aggiungere il proprio esercizio nel file principale.
+- Eseguire il merge.
+
+
 
 # Gli Esercizi
 
