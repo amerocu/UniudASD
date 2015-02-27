@@ -13,7 +13,7 @@ Es. 2015_02_02-01b-MT.tex
 Specificando l'autore sono così ammesse più soluzioni.
 
 Il documento ha un file principale in cui verranno inclusi tutti gli esercizi.
-Sarà così possibile produrre documenti con ordinamento degli eserchzzi differenti.
+Sarà così possibile produrre documenti con ordinamento degli esercizi differenti.
 
 # Partecipare
 
