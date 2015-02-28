@@ -1,0 +1,39 @@
+% !TEX root = ../main.tex
+
+\subsection[07b MT]{Esercizio 07b Marco Turchetto}
+
+\begin{table}[htdp]
+	\caption{default}
+	\begin{center}
+	\begin{tabular}{r | *{8}{c|}}
+		idx & +(1) & +(18) & +(10) & +(22) & +(6) & -(18) & +(15) & +(23) \\ \hline
+		0   &      &       &       &       &    6 &     6 &     6 &    6  \\ \cline{2-9}
+		1   &    1 &     1 &     1 &     1 &    1 &     1 &     1 &    1  \\ \cline{2-9}
+		2   &      &    18 &    18 &    18 &   18 &     D &     D &    D  \\ \cline{2-9}
+		3   &      &       &       &       &      &       &       &   23  \\ \cline{2-9}
+		4   &      &       &    10 &    10 &   10 &    10 &    10 &   10  \\ \cline{2-9}
+		5   &      &       &       &       &      &       &       &       \\ \cline{2-9}
+		6   &      &       &       &    22 &   22 &    22 &    22 &   22  \\ \cline{2-9}
+		7   &      &       &       &       &      &       &    15 &   15  \\ \cline{2-9}
+	\end{tabular}
+	\end{center}
+	\label{default}
+\end{table}
+
+\begin{align*}
+	+(1)  &= h(1,0)  = 1 \bmod 8 = 1 \\
+	+(18) &= h(18,0) = 18 + \bmod 8 = 2 \\
+	+(10) &= h(10,0) = 10 + \bmod 8 = 2 \\
+		  &= h(10,1) = (10 + 2) \bmod 8 = 12 \bmod 8 = 4 \\
+	+(22) &= h(22,0) = (22 - 16) \bmod 8 = 6 \\
+	+(6)  &= h(6,0)  = 6 + \bmod 8 = 6 \\
+		  &= h(6,1)  = (6 + 2) \bmod 8 = 0 \\
+	-(18) &\rightarrow \ p[2] = \text{Deleted} \\
+	+(15) &= h(15,0) = 15 \bmod 8 = 7 \\
+	+(23) &= h(23,0) = 23 \bmod 8 = 7 \\
+		  &= h(23,1) = (23 + 2) \bmod 8 = 1 \\
+		  &= h(23,2) = (24 + 4) \bmod 8= 28 \bmod 8 = 3 \\
+\end{align*}
+
+
+
