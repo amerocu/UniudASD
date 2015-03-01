@@ -1,8 +1,8 @@
 % !TEX root = ../main.tex
 
 \subsection[01b MT]{Esercizio 01b Marco Turchetto}
-
-a) Risolvere:
+\begin{enumerate}[label=\alph*)]
+\item Risolvere:
 
 \begin{equation}
 	T(n)=\begin{cases}
@@ -26,7 +26,7 @@ a) Risolvere:
 	     &= \BigTheta{n \sqrt{n} \log_4 n}
 \end{align*}
 
-b) Dimostrare:
+\item Dimostrare:
 \begin{equation*}
 \left.
 	\begin{aligned}
@@ -41,7 +41,8 @@ Nota la seguente regola
 	\lim _{x \to \infty} \frac{f(x)}{g(x)} = \infty \Rightarrow g(x) \in \BigO{f(x)}
 \end{equation*}
 
-E' facile dimostrare
+\`{E} facile dimostrare
 \begin{align*}
 	\lim _{n \to \infty} \frac{n^3}{n \sqrt{n}(\log n)} = \lim _{n \to \infty} \frac{\sqrt{n}}{ \log n} = \infty \Rightarrow g(x) \in \BigO{f(x)}
 \end{align*}
+\end{enumerate}
