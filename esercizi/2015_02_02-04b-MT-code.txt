@@ -1,0 +1,17 @@
+Antenato(T, k1, k2){
+	if(T.value == k2)
+		return false;
+		
+	if(T.value == k1)
+		return true;
+		
+	if(T.value < k1 and T.value < k2)
+		return Antenato(T.right, k1, k2);
+		
+	if(T.value > k1 and T.value > k2)
+		return Antenato(T.left, k1, k2);
+		
+	return false;
+}
+	
+	

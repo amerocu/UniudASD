@@ -1,0 +1,47 @@
+% !TEX root = ../main.tex
+
+\subsection[01b MT]{Esercizio 01b Marco Turchetto}
+
+a) Risolvere:
+
+\begin{equation}
+	T(n)=\begin{cases}
+		\BigTheta{1}							            & \text{se $n \leq 1$}.\\
+		\text{$8T( \frac{n}{4} ) + \BigTheta{n \sqrt{n}} $} & \text{se $n > 1$}.
+ 	\end{cases}
+\end{equation}
+
+\begin{align*}
+	T(n) &= 8T(\frac{n}{4}) + \BigTheta{ n \sqrt{n}}  & n = 4^k \\
+	T(4^k) &= 8T(\frac{4^k}{4}) + \BigTheta{4^k \sqrt{4^k}} \\
+	\frac{H(k)}{8^k} &= \frac{H(k-1)}{8^{k-1}} + \frac{\BigTheta{4^k \sqrt{4^k}}}{8^k} & T(4^k) = H(k) \\
+	G(k) &= G(k-1) + \BigTheta{\frac{4^k \sqrt{4^k}}{8^k}} & \frac{H(k)}{8^k} = G(k)\\
+	G(k) &= \sum _{i=1} ^{k} \BigTheta{\frac{4^k \sqrt{4^k}}{8^k}} \\
+	     &= \sum _{i=1} ^{k} \BigTheta{1} = \BigTheta{k} \\
+	G(k) &= \BigTheta{k} \\
+	H(k) &= \BigTheta{k} 2^{3k} & H(k) = G(k) 8^k\\
+	T(4^k) &= \BigTheta{k} 2^{3k} & T(4^k) = H(k) \\
+	T(n) &= \BigTheta{\log _4 n} 2^{3 \log_4 n} & k= \log_4 n \\ 
+	     &= c \log _4 n \ 2^{\log_4 n} \ 2 ^ {2 \log _ 4 n} \\
+	     &= \BigTheta{n \sqrt{n} \log_4 n}
+\end{align*}
+
+b) Dimostrare:
+\begin{equation*}
+\left.
+	\begin{aligned}
+		g(n) &= n \sqrt{n}(\log n) \\
+		f(n) &= n^3
+	\end{aligned}
+\right \} \Rightarrow  g(n) \in \BigO{f(n)} 
+\end{equation*}
+
+Nota la seguente regola
+\begin{equation*}
+	\lim _{x \to \infty} \frac{f(x)}{g(x)} = \infty \Rightarrow g(x) \in \BigO{f(x)}
+\end{equation*}
+
+E' facile dimostrare
+\begin{align*}
+	\lim _{n \to \infty} \frac{n^3}{n \sqrt{n}(\log n)} = \lim _{n \to \infty} \frac{\sqrt{n}}{ \log n} = \infty \Rightarrow g(x) \in \BigO{f(x)}
+\end{align*}

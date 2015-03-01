@@ -1,0 +1,31 @@
+% !TEX root = ../main.tex
+
+\subsection[06b MT]{Esercizio 06b Marco Turchetto}
+
+a) L'equazione ricorsiva: 
+	\begin{equation*}
+		MC(n)=\begin{cases}
+			\BigTheta{1}				& \text{se $n +1  < 4$}.\\
+			2MC(n - 3) + \BigTheta{1}	& \text{altrimenti}.
+ 		\end{cases}
+		= \BigTheta{2^n}
+	\end{equation*}
+	
+	
+	
+b) Al termine il vettore non è ordinato e si può facilmente provare ordinando il vettore
+	$ \{ 5, 4, 3, 2, 1 \} $
+	
+	\begin{table}[htdp]
+		\caption{default}
+		\begin{center}
+		\begin{tabular}{*{5}{|c}|l}
+			1 & 2 & 3 & 4 & 5 & Indici \\ \cline{1-5}
+			5 & 4 & 3 & 2 & 1 & Vettore iniziale \\ \cline{1-5}
+			4 & 5 &   &   &   & MC(1,2) \\ \cline{1-5}
+			  &   &   & 1 & 2 & MC(4,5) \\ \cline{1-5}
+			4 & 5 & 3 & 1 & 2 & MC(1,5) \\ \cline{1-5}
+		\end{tabular}
+		\end{center}
+		\label{default}
+	\end{table}

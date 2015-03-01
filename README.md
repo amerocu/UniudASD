@@ -36,6 +36,10 @@ Aggiunti il tuo nome alla lista delle persone.
 | 2015 02 02    | 01  | Marco Turchetto | Svolto        |
 |               | 02  | Marco Turchetto | Svolto        |
 |               | 03  | Marco Turchetto | Svolto        |
+|               | 04  | Marco Turchetto | Svolto        |
+|               | 05  | Marco Turchetto | Svolto        |
+|               | 06  | Marco Turchetto | Svolto        |
+|               | 07  | Marco Turchetto | Svolto        |
 
 # Le Persone
 

@@ -1,0 +1,36 @@
+MakeMaxStack(n){
+	MS.data <- Array di dimensione n; // indici da 0 a n-1
+	MS.top <- 0;
+	MS.size <- n;
+	return MS;
+}
+
+Empty(MS){
+	return MS.top == 0;
+}
+
+Pop(MS){
+	if(S.top > 0){
+		return MS.Data[--top];
+	}
+}
+
+Push(MS, x){
+	if(S.top < MS.size){
+		S.data[top++] = x;
+	}
+}
+
+FindMax(MS){
+	if(! Empty(MS)){
+		max = MS.data[0];
+		
+		for(int i = 0; i < MS.top; i++){
+			if(MS.data[i] > max){
+				max = S.data[i];
+			}
+		}
+		
+		return max
+	}
+}
