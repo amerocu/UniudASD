@@ -1,11 +1,12 @@
 % !TEX root = ../main.tex
 
 \subsection[05b MT]{Esercizio 05b Marco Turchetto}
-
-+( 10, 5, 7, 12, 2, 4, 15, 13, 3, 20, 14). \\
+\begin{tabular}{cc}
+$+( 10, 5, 7, 12, 2, 4, 15, 13, 3, 20, 14)$ & $-(10)$ \\
+\\
 \begin{forest}
-	[10,
-	for tree={circle,draw}
+	BST
+	[10
 		[5
 			[2
 				[,phantom]
@@ -28,11 +29,10 @@
 		]
 	]
 \end{forest}
-
--(10)\\
+&
 \begin{forest}
-	[7,
-	for tree={circle,draw}
+	BST
+	[7
 		[5
 			[2
 				[,phantom]
@@ -41,7 +41,7 @@
 					[,phantom]
 				]
 			]
-			[10] % Mettere una X rossa
+			[10, DelNode]
 		]
 		[12
 			[,phantom]
@@ -55,17 +55,21 @@
 		]
 	]
 \end{forest}
+\end{tabular}
 
--(4) \\
+
+\begin{tabular}{cc}
+$-(4)$ & $-(20)$ \\
+\\
 \begin{forest}
-	[7,
-	for tree={circle,draw}
+	BST
+	[7
 		[5
 			[2
 				[,phantom]
 				[3
 					[,phantom]
-					[4] % mettere una x
+					[4, DelNode]
 				]
 			]
 			[,phantom]
@@ -82,11 +86,10 @@
 		]
 	]
 \end{forest}
-
--(20) \\
+&
 \begin{forest}
-	[7,
-	for tree={circle,draw}
+	BST
+	[7	
 		[5
 			[2
 				[,phantom]
@@ -101,16 +104,20 @@
 					[,phantom]
 					[14]
 				]
-				[20] % mettere una X
+				[20, DelNode]
 			]
 		]
 	]
 \end{forest}
+\end{tabular}
 
--(15) \\
+
+\begin{tabular}{c}
+$-(15)$  \\
+\\
 \begin{forest}
-	[7,
-	for tree={circle,draw}
+	BST
+	[7
 		[5
 			[2
 				[,phantom]
@@ -120,7 +127,7 @@
 		]
 		[12
 			[,phantom]
-			[15 % Mettere x rossa
+			[15, DelNode
 				[,phantom]
 				[13
 					[,phantom]
@@ -130,7 +137,4 @@
 		]
 	]
 \end{forest}
-
-
-
-
+\end{tabular}
