@@ -26,12 +26,11 @@
 	\newcommand{\SmlTheta}[1]{\ensuremath{\theta\bigl(#1\bigr)}}
 	%Big Omega asyntotic notation shortcut
 	\newcommand{\SmlOmega}[1]{\ensuremath{\omega\bigl(#1\bigr)}}
-	%Define forest's tree options
 
-%Define Binary Search Tree forest's style
+% Define forest's BST and DelNode style
 \forestset{
-BST/.style={for tree={circle,draw,calign=fixed edge angles,calign angle=40}},
-red cross/.append style={cross, draw}
+BST/.style={for tree={circle,draw,calign=fixed edge angles,calign angle=40,scale=0.58,l=0.3cm}},
+DelNode/.style={draw=red,forbidden sign}, % Red circle signed for deleting node
 }
 	
 \pagestyle{plain} % plain headings empty
