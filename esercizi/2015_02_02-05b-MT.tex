@@ -1,9 +1,9 @@
 % !TEX root = ../main.tex
 
 \subsection[05b MT]{Esercizio 05b Marco Turchetto}
-
-+( 10, 5, 7, 12, 2, 4, 15, 13, 3, 20, 14). \\
-\begin{center}
+\begin{tabular}{cc}
+$+( 10, 5, 7, 12, 2, 4, 15, 13, 3, 20, 14)$ & $-(10)$ \\
+\\
 \begin{forest}
 	BST
 	[10
@@ -29,12 +29,9 @@
 		]
 	]
 \end{forest}
-\end{center}
-
--(10)\\
-\begin{center}
+&
 \begin{forest}
- BST
+	BST
 	[7
 		[5
 			[2
@@ -44,7 +41,7 @@
 					[,phantom]
 				]
 			]
-			[10,red cross] % Mettere una X rossa
+			[10, DelNode]
 		]
 		[12
 			[,phantom]
@@ -58,10 +55,12 @@
 		]
 	]
 \end{forest}
-\end{center}
+\end{tabular}
 
--(4) \\
-\begin{center}
+
+\begin{tabular}{cc}
+$-(4)$ & $-(20)$ \\
+\\
 \begin{forest}
 	BST
 	[7
@@ -70,7 +69,7 @@
 				[,phantom]
 				[3
 					[,phantom]
-					[4] % mettere una x
+					[4, DelNode]
 				]
 			]
 			[,phantom]
@@ -87,10 +86,7 @@
 		]
 	]
 \end{forest}
-\end{center}
-
--(20) \\
-\begin{center}
+&
 \begin{forest}
 	BST
 	[7	
@@ -108,15 +104,17 @@
 					[,phantom]
 					[14]
 				]
-				[20] % mettere una X
+				[20, DelNode]
 			]
 		]
 	]
 \end{forest}
-\end{center}
+\end{tabular}
 
--(15) \\
-\begin{center}
+
+\begin{tabular}{c}
+$-(15)$  \\
+\\
 \begin{forest}
 	BST
 	[7
@@ -129,7 +127,7 @@
 		]
 		[12
 			[,phantom]
-			[15 % Mettere x rossa
+			[15, DelNode
 				[,phantom]
 				[13
 					[,phantom]
@@ -139,7 +137,4 @@
 		]
 	]
 \end{forest}
-\end{center}
-
-
-
+\end{tabular}
