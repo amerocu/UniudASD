@@ -10,23 +10,18 @@
 La complessità dell'algoritmo è eguale ad una esplorazione in profondità dell'albero.
 $\BigTheta{n}$ nel caso peggiore, $\BigO{\log n}$ nel caso medio.
 
-La correttezza dell'algoritmo si dimostra analizzando i 4 casi dell'algoritmo.
+La correttezza dell'algoritmo si dimostra analizzando i quattro casi dell'algoritmo.
 
 Dando per ipotesi l'esistenza delle chiavi $k_1$ e $k_2$ uniche:
 
 \begin{enumerate}
-\item Se il mio albero ha come radice un elemento eguale a $k_2$ allora $k_1$ deve per forza essere
-	in uno dei due sotto-alberi della radice e perciò $k_1$ non è antenato di $k_2$
+\item se il mio albero ha come radice un elemento eguale a $k_2$, allora $k_1$ deve per forza essere in uno dei due sotto-alberi della radice e perciò $k_1$ non è antenato di $k_2$;
 	
-\item Se il mio albero ha come radice un elemento eguale a $k_1$ allora $k_2$ deve per forza essere
-	in uno dei due sotto-alberi della radice e perciò $k_1$ è antenato di $k_2$.
+\item se il mio albero ha come radice un elemento eguale a $k_1$, allora $k_2$ deve per forza essere in uno dei due sotto-alberi della radice e perciò $k_1$ è antenato di $k_2$;
 	 
-\item Se entrambe le chiavi $k_1$ e $k_2$ sono minori del valore dell'elemento della radice allora
-	cerco se $k_1$ è antenato di $k_2$ nel sotto-albero sinistro.
+\item se entrambe le chiavi $k_1$ e $k_2$ sono minori del valore dell'elemento della radice, allora cerco se $k_1$ è antenato di $k_2$ nel sotto-albero sinistro;
 	
-\item Se entrambe le chiavi $k_1$ e $k_2$ sono maggiori del valore dell'elemento della radice allora
-	cerco se $k_1$ è antenato di $k_2$ nel sotto-albero destro.
+\item se entrambe le chiavi $k_1$ e $k_2$ sono maggiori del valore dell'elemento della radice, allora cerco se $k_1$ è antenato di $k_2$ nel sotto-albero destro.
 	
-\item Se "nessuno dei casi precedenti" allora le chiavi sono in sotto-alberi diversi e perciò $k_1$
-	 non è antenato di $k_2$
+\item se nessuno dei casi precedenti si verifica, le chiavi sono in sotto-alberi diversi e perciò $k_1$ non è antenato di $k_2$.
 \end{enumerate}
