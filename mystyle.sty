@@ -5,12 +5,14 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 
-\usepackage{listings}
-
 \usepackage{enumerate}
 \usepackage{enumitem}
 
 \usepackage{forest}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
 
 % Asymptotic symbols
 	%Big O asyntotic notation shortcut
@@ -32,6 +34,13 @@
 BST/.style={for tree={circle,draw,calign=fixed edge angles,calign angle=40,scale=0.58,l=0.3cm}},
 DelNode/.style={draw=red,forbidden sign}, % Red circle signed for deleting node
 }
+
+% Define default codes style
+\lstset{basicstyle=\small\ttfamily,tabsize=3,stringstyle=\color{black},%
+	numbers=left,numberstyle=\tiny,frame=lines}
+
+% New command for empty verical border
+\newcommand{\noborder}[1]{\multicolumn{1}{c}{#1}}
 	
 \pagestyle{plain} % plain headings empty
 

@@ -7,13 +7,13 @@
 \begin{equation}
 	T(n)=\begin{cases}
 		\BigTheta{1}							            & \text{se $n \leq 1$}.\\
-		\text{$8T( \frac{n}{4} ) + \BigTheta{n \sqrt{n}} $} & \text{se $n > 1$}.
+		\text{$8T\left( \frac{n}{4} \right) + \BigTheta{n \sqrt{n}} $} & \text{se $n > 1$}.
  	\end{cases}
 \end{equation}
 
 \begin{align*}
-	T(n) &= 8T(\frac{n}{4}) + \BigTheta{ n \sqrt{n}}  & n = 4^k \\
-	T(4^k) &= 8T(\frac{4^k}{4}) + \BigTheta{4^k \sqrt{4^k}} \\
+	T(n) &= 8T\left(\frac{n}{4}\right) + \BigTheta{ n \sqrt{n}}  & n = 4^k \\
+	T(4^k) &= 8T\left(\frac{4^k}{4}\right) + \BigTheta{4^k \sqrt{4^k}} \\
 	\frac{H(k)}{8^k} &= \frac{H(k-1)}{8^{k-1}} + \frac{\BigTheta{4^k \sqrt{4^k}}}{8^k} & T(4^k) = H(k) \\
 	G(k) &= G(k-1) + \BigTheta{\frac{4^k \sqrt{4^k}}{8^k}} & \frac{H(k)}{8^k} = G(k)\\
 	G(k) &= \sum _{i=1} ^{k} \BigTheta{\frac{4^k \sqrt{4^k}}{8^k}} \\
@@ -43,6 +43,6 @@ Nota la seguente regola
 
 \`{E} facile dimostrare
 \begin{align*}
-	\lim _{n \to \infty} \frac{n^3}{n \sqrt{n}(\log n)} = \lim _{n \to \infty} \frac{\sqrt{n}}{ \log n} = \infty \Rightarrow g(x) \in \BigO{f(x)}
+	\lim _{n \to \infty} \frac{n^3}{n \sqrt{n}(\log n)} = \lim _{n \to \infty} \frac{\sqrt{n}}{ \log n} = \infty \Rightarrow g(n) \in \BigO{f(n)}
 \end{align*}
 \end{enumerate}
