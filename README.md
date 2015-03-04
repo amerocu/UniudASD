@@ -17,7 +17,7 @@ Sarà così possibile produrre documenti con ordinamento degli esercizi differen
 
 # Partecipare
 
-Aggiunti il tuo nome alla lista delle persone.
+Aggiungi il tuo nome alla lista delle persone.
 
 ## Aggiungere un esercizio
 
