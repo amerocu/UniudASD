@@ -1,0 +1,12 @@
+QuickSortSelect(A){
+	_QuickSortSelect(A, 1, lenght[A])
+}
+
+_QuickSortSelect(A, p , q){
+	if ( p < q) {
+		mid = (p + q) / 2
+		QuickSelect(A, p, q, m)
+		_QuickSortSelect(A, p, m-1)
+		_QuickSortSelect(A, m+1, q)
+	}
+}
