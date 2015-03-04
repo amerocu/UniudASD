@@ -2,4 +2,55 @@
 
 \subsection[01b MT]{Esercizio 01b Marco Turchetto}
 
+\begin{enumerate}[label=\alph*)]
+\item
+	Definizioni di \( \BigO{g(n)} \) e \( \BigOmega{h(n)} \), vedi esercizio precedente.
 
+\item 
+	Dimostrare per induzione che \( T(n) \in \BigO{n^2} \):
+
+	\begin{equation*}
+		T(n)=
+		\begin{cases}
+			\BigO{1}								& \text{se n = 1} \\
+			3T \left(\frac{n}{2} \right) + c n^2	& \text{se n > 1} \\
+		\end{cases}
+	\end{equation*}
+	
+	Caso base con \( \tilde{n} = 1 \):
+	
+	\begin{align*}
+		T(1) &= c \\
+	\end{align*}
+	
+	\( \exists d | T(n) \leq d n^2 \ t.s. \ n = \tilde{n} \) ? \\
+	
+	\begin{align*}
+		\exists d > 0 | c \leq d
+	\end{align*}
+	
+	Ipotesi induttiva:\\
+	\[
+		IP \ T(r) \in \BigO{n ^ 2} \forall r | \tilde{n} < r < n
+	\]
+	
+	Tesi:\\
+	\[
+		TS \ T(n) \in \BigO{n ^ 2} \forall n | n \geq \tilde{n}
+	\]
+	
+	\begin{align*}
+		T(n) &= 3T \left(\frac{n}{2} \right) + c n^2   \\
+		T(n) &\leq 3c_2 \left( \frac{n}{2} \right)^2 + c_1 n^2 & \text{Per ipotesi induttiva} \\
+	\end{align*}
+	
+	\( \exists d | T(n) \leq d n^2 \ \forall n > \tilde{n} \) ? \\
+	
+	\begin{align*}
+		T(n) \leq 3c_2 \left( \frac{n}{2} \right)^2 + c_1 n^2 &\leq d n^2 \\
+		% Aggiungere i passaggi
+		d &\geq 4c \\
+		\exists d > 0 | d &\leq 4c \\
+	\end{align*}
+
+\end{enumerate}

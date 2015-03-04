@@ -46,14 +46,15 @@
 	\]
 	
 	\begin{align*}
-		T(n) &= 2T \left( \frac{n}{4} \right) + c\sqrt{n}  & \text{Per ipotesi induttiva} \\
-		T(n) &\leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n} \\
+		T(n) &= 2T \left( \frac{n}{4} \right) + c\sqrt{n}  \\
+		T(n) &\leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n}  & \text{Per ipotesi induttiva} \\
 	\end{align*}
 	
 	\( \exists d | T(n) \leq d \sqrt{n} \log n \ \forall n > \tilde{n} \) ? \\
 	
 	\begin{align*}
 		T(n) \leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n} &\leq d \sqrt{n} \log n \\
+		% Sarebbe da aggiungere qualche passaggio
 		d \log 4 &\geq c \\
 		\exists d > 0 | d &\geq \frac{c}{\log 4} \\
 	\end{align*}
