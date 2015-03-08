@@ -46,3 +46,4 @@ Aggiunti il tuo nome alla lista delle persone.
 | Nome          | Cognome      | Sigla | 
 | ------------- |------------- | ----- |
 | Marco         |Turchetto     | MT    |
+| Marco         |Taiariol      | ----- |
