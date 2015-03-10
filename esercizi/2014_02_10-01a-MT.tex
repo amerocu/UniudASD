@@ -1,0 +1,62 @@
+% !TEX root = ../main.tex
+
+\subsection[01a MT]{Esercizio 01a Marco Turchetto}
+
+\begin{enumerate}[label=\alph*)]
+\item
+	Definizioni di \( \BigO{g(n)} \) e \( \BigOmega{h(n)} \) \\
+	\begin{align*}
+		\BigO{g(n)} &= \{ f(n) | \exists \tilde{n}, c_1 s.t. f(n) \leq c_1 g(n) \forall n > \tilde{n} \} \\
+		\BigOmega{h(n)} &= \{ f(n) | \exists \tilde{n}, c_1 s.t. f(n) \geq c_1 h(n) \forall n > \tilde{n} \} \\
+	\end{align*}
+
+\item 
+	Dimostrare per induzione che \( T(n) \in \BigO{\sqrt{n} \log n} \):
+
+	\begin{equation*}
+		T(n)=
+		\begin{cases}
+			\BigO{1} \\
+			2T \left(\frac{n}{4} \right) + c \sqrt{n} \\
+		\end{cases}
+	\end{equation*}
+	
+	Caso base con $\tilde{n} = 4$:
+	
+	\begin{align*}
+		T(4) &= 2T \left(\frac{4}{4} \right) + c \sqrt{4} \\
+			 &= 2 \BigO{1} + 2c = 2c_1 + 2c_2 \\
+	\end{align*}
+	
+	\( \exists c_3 | T(n) \leq c_3 \sqrt{n} \log n \ t.s. \ n = \tilde{n} \) ? \\
+	
+	\begin{align*}
+		2c_1 + 2c_2 &\leq c_3 \sqrt{4} \log 4 \\
+		\frac{c_1 + c_2}{\log 4} &\leq c_3 \Rightarrow \exists c_3 > 0
+	\end{align*}
+	
+	Ipotesi induttiva:\\
+	\[
+		IP \ T(r) \in \BigO{\sqrt{n} \log n} \forall r | \tilde{n} < r < n
+	\]
+	
+	Tesi:\\
+	\[
+		TS \ T(n) \in \BigO{\sqrt{n} \log n} \forall n | n \geq \tilde{n}
+	\]
+	
+	\begin{align*}
+		T(n) &= 2T \left( \frac{n}{4} \right) + c\sqrt{n}  \\
+		T(n) &\leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n}  & \text{Per ipotesi induttiva} \\
+	\end{align*}
+	
+	\( \exists d | T(n) \leq d \sqrt{n} \log n \ \forall n > \tilde{n} \) ? \\
+	
+	\begin{align*}
+		T(n) \leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n} &\leq d \sqrt{n} \log n \\
+		% Sarebbe da aggiungere qualche passaggio
+		d \log 4 &\geq c \\
+		\exists d > 0 | d &\geq \frac{c}{\log 4} \\
+	\end{align*}
+
+\end{enumerate}
