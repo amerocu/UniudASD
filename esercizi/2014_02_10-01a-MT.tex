@@ -6,8 +6,8 @@
 \item
 	Definizioni di \( \BigO{g(n)} \) e \( \BigOmega{h(n)} \) \\
 	\begin{align*}
-		\BigO{g(n)} &= \{ f(n) | \exists \tilde{n}, c_1 s.t. f(n) \leq c_1 g(n) \forall n > \tilde{n} \} \\
-		\BigOmega{h(n)} &= \{ f(n) | \exists \tilde{n}, c_1 s.t. f(n) \geq c_1 h(n) \forall n > \tilde{n} \} \\
+		\BigO{g(n)} &= \Set{f(n) | \exists \tilde{n}, c_1 \;\text{t.c.}\; f(n) \leq c_1 g(n), \forall n > \tilde{n}} \\ % Capire come sono definiti i due insiemi
+		\BigOmega{h(n)} &= \Set{ f(n) | \exists \tilde{n}, c_1\; \text{t.c.}\; f(n) \geq c_1 h(n), \forall n > \tilde{n}} \\
 	\end{align*}
 
 \item 
@@ -28,7 +28,7 @@
 			 &= 2 \BigO{1} + 2c = 2c_1 + 2c_2 \\
 	\end{align*}
 	
-	\( \exists c_3 | T(n) \leq c_3 \sqrt{n} \log n \ t.s. \ n = \tilde{n} \) ? \\
+	\( \exists c_3 \;\text{t.c.}\; T(n) \leq c_3 \sqrt{n} \log n \;\text{t.c.}\; n = \tilde{n} \) ? \\
 	
 	\begin{align*}
 		2c_1 + 2c_2 &\leq c_3 \sqrt{4} \log 4 \\
@@ -37,12 +37,12 @@
 	
 	Ipotesi induttiva:\\
 	\[
-		IP \ T(r) \in \BigO{\sqrt{n} \log n} \forall r | \tilde{n} < r < n
+		T(r) \in \BigO{\sqrt{n} \log n}\quad \forall r \;\text{t.c.}\; \tilde{n} < r < n
 	\]
 	
 	Tesi:\\
 	\[
-		TS \ T(n) \in \BigO{\sqrt{n} \log n} \forall n | n \geq \tilde{n}
+		T(n) \in \BigO{\sqrt{n} \log n}\quad \forall n \;\text{t.c.}\; n \geq \tilde{n}
 	\]
 	
 	\begin{align*}
@@ -50,13 +50,13 @@
 		T(n) &\leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n}  & \text{Per ipotesi induttiva} \\
 	\end{align*}
 	
-	\( \exists d | T(n) \leq d \sqrt{n} \log n \ \forall n > \tilde{n} \) ? \\
+	\( \exists d>0 \;\text{t.c.}\; T(n) \leq d \sqrt{n} \log n \quad \forall n > \tilde{n} \) ? \\
 	
 	\begin{align*}
 		T(n) \leq 2c_2\sqrt{\frac{n}{4}} \log \frac{n}{4} + c_1\sqrt{n} &\leq d \sqrt{n} \log n \\
 		% Sarebbe da aggiungere qualche passaggio
 		d \log 4 &\geq c \\
-		\exists d > 0 | d &\geq \frac{c}{\log 4} \\
+		\exists d > 0 \;\text{t.c.}\; d &\geq \frac{c}{\log 4} \\
 	\end{align*}
 
 \end{enumerate}
