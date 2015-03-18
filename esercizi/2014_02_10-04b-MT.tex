@@ -2,4 +2,18 @@
 
 \subsection[04b MT]{Esercizio 04b Marco Turchetto}
 
+\begin{enumerate}[label=\alph*)]
+\item
+	Diamo per scontata l'esistenza di un metodo \texttt{size(N)} che dato il nodo ci restituisce il numero di sottofondi in tempo \BigTheta{1}, ad esempio leggendo una variabile contenuta nel nodo che viene aggiornata in automatico durante le operazioni di \texttt{Insert} e \texttt{Delete} senza modificare la complessità delle due procedure. \\
+	La procedura è una esplorazione simmetrica dell'albero, in cui viene esplorato prima l'albero destro e poi il sinistro affinché i valori vengano stampati in ordine decrescente e in cui l'operazione di print delle chiavi è protetta dall'if che permette unicamente alle chiavi dei nodi con  \( size == c \) di essere stampate. \\
+	L'algoritmo viene inoltre arricchito con una condizione che interrompe l'esplorazione dell'albero quando il numero di sotto-nodi è inferiore c, evitando di esplorare tutti sotto-alberi più piccoli.
+	\lstinputlisting{./esercizi/2014_02_10-04b-MT-code.txt}
+\item
+	La complessità e sicuramente \BigO{n} in quanto al più dovremo esplorare tutto l'albero per stampare tutte o l'unica foglia.
+	Si può però eseguire una analisi più precisa tenendo conto del valore di \( c \) nell'equazione della complessità, che incide notevolmente per esempio nel caso limite in cui se \( c = n \) l'esplorazione termina alla radice con una complessità di \BigTheta{1}
+	Di fatto il valore di \( c \) indica un limite al profondità della nostra esplorazione.
+	L'altezza dell'esplorazione dell'albero è quindi, con un albero perfettamente bilanciato, \( \BigTheta{ \frac{n}{c} } \) e quando l'albero è una lista \BigTheta{n - c}.
+	
+	
+\end{enumerate}
 

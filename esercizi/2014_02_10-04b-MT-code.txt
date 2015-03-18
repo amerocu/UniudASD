@@ -1,0 +1,9 @@
+Explore(T, c){
+	if (T != null && size(T) >= c) {
+		explore(T.right, c);
+		if (size(T) == c) {
+			print(T.value);
+		}
+		explore(T.left, c);
+	}
+}
