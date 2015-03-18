@@ -7,22 +7,23 @@
 %	\lstinputlisting[firstline=1, lastline=9]{./esercizi/2014_02_10-03a-MT-code.txt}
 	
 \item
-	La funzione RetriveMin restituisce l'indice dell'elemento più piccolo eseguendo una ricerca lineare su tutte le foglie della heap. 		Questo è il metodo più efficiente considerando le ipotesi, ed ha complessità \BigTheta{n}.
+	La funzione \texttt{RetriveMin} restituisce l'indice dell'elemento più piccolo eseguendo una ricerca lineare su tutte le foglie della heap.
+	Questo è il metodo più efficiente considerando le ipotesi, ed ha complessità \BigTheta{n}.
+	
 	\lstinputlisting[firstline=11, lastline=22]{./esercizi/2014_02_10-03a-MT-code.txt}
 	
 \item
-	La procedura DeleteMin prima cerca il minimo tramite la funzione RetriveMin e poi elimina l'elemento tramite la procedura
-	Delete propria delle max/min-Heap.
+	La procedura \texttt{DeleteMin} prima cerca il minimo tramite la funzione \texttt{RetriveMin} e poi elimina l'elemento tramite la procedura \texttt{Delete} propria delle max/min-Heap.
 	La complessità è la somma delle complessità delle due funzioni chiamate \( \BigTheta{n} + \BigO{ \log n} = \BigTheta{n}\)
+	
 	\lstinputlisting[firstline=24, lastline=27]{./esercizi/2014_02_10-03a-MT-code.txt}
 	
 \item
-	La complessità nel caso peggiore è in quello minore è \BigTheta{n} che equivale alla componente associata alla ricerca del
-	minimo, nonché quella prevalente, che è indipendente da ipotesi sulla distribuzione delle chiavi.
+	La complessità nel caso peggiore è in quello minore è \BigTheta{n} che equivale alla componente associata alla ricerca del minimo, nonché quella prevalente, che è indipendente da ipotesi sulla distribuzione delle chiavi.
 	
 \item
-	La complessità nel caso minore e peggiore è \BigTheta{\log n}, questo perché nella procedura InsertKey(H, m), l'elemento m viene
-	inserito come ultima foglia, ed essendo \( m > max(H) \) l'elemento dovrà sempre risalire l'intera heap, per diventarne la radice.
+	La complessità nel caso minore e peggiore è \BigTheta{\log n}, questo perché nella procedura \texttt{InsertKey(H, m)}, l'elemento m viene inserito come ultima foglia, ed essendo \( m > max(H) \) l'elemento dovrà sempre risalire l'intera heap, per diventarne la radice.
+	
 	\lstinputlisting[firstline=1, lastline=10]{./esercizi/2014_02_10-03a-MT-code.txt}
 		
 \end{enumerate}
