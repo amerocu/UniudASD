@@ -1,0 +1,27 @@
+InsertKey(H, key){
+	size[H] <- size[H] + 1
+	n <- size[H]
+	H[n] <- key
+	while (k > H[parent(n)] and n > 1){
+		swap(H, n, parent(n))
+		n <- parent(n)
+	}
+}
+
+RetriveMin(H){
+	min <- H[1]
+	i <- 2
+	while (i <= size[H]) {
+		if (H[i] < min) {
+			min <- H[i]
+		}	
+	}
+	
+	// H[i] contiene il minimo
+	return i
+}
+
+DeleteMin(H){
+	min <- RetriveMin(H);
+	Delete(H, min);
+}
