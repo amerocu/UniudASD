@@ -3,7 +3,70 @@
 \chapter{RB-Tree}
 
 \section{Definizione}
+
+\begin{enumerate}
+
+	\item Ogni nodo ha un campo color, che può assumere valore "red" oppure "black".
+	\item Tutte le foglie sono "NIL" e "black" (non hanno chiave).
+	\item Ogni nodo "red" ha due figli "black".
+	\item Per ogni nodo x, tutti i cammini x->foglia attraversano sempre lo stesso numero di nodi black.
+	\item[Bis.] La radice di un RB-Tree è "balck"
+
+\end{enumerate}
+
 \section{Operazioni}
 \subsection{Rotazioni}
 \subsection{Inserimento}
+
+\begin{enumerate}
+	\item Inserisco il nuovo elemento come foglia rossa.
+	
+	\item padre "nero"
+	\item padre "rosso"
+	\begin{enumerate}
+		\item zio "rosso"
+		\item zio "nero"
+		\begin{enumerate}
+			\item stesso lato
+			\item lato diverso
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
 \subsection{Cancellazione}
+
+\begin{enumerate}
+	\item Sostituisco l'elemento da cancellare con il suo predecessore/successore.
+	
+	\item Elimino il predecessore/successore, sostituendolo con il suo UNICO figlio.
+	
+	\item predecessore/successore sono figlio:
+	
+	\begin{enumerate}
+		\item Almeno uno rosso, OK
+		\item Entrambi neri, il figlio diventa "double-balck"
+		\item il fratello e:
+		\begin{enumerate}
+			\item rosso: rotate sul padre, così che il fratello diventi nero. 
+			\item nero con figli neri: sposto l'altezza nera dal nodo e dal fratello, al padre, se il padre era nero ritorsione, sennò OK.
+			\item nero con figlio opposto rosso: il figlio concorde diventa il fratello
+			\item nero con figlio concorde rosso: il figlio rosso diventa il fratello (sposto il rosso da concorde ad opposto) OK
+		\end{enumerate}
+	\end{enumerate}
+	
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

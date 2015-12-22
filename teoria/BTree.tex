@@ -3,6 +3,20 @@
 \chapter{B-Tree}
 
 \section{Definizione}
+
+Un B-tree di grato \( t > 2 \) e un albero t.c.
+\begin{enumerate}
+	\item Ogni nodo \( x \) contiene \( n[x] \) chiavi ordinate.
+	\item Ogni nodo \( x \), non foglia, ha \( n[x]+1 \) figli.
+	\item Ogni chiave \( k \), contenuta nel sottoalbero \( C_i \) appartenente al nodo \( z \) e compresa tra le chiavi \( key_{i-1}[z] \) e \( key_{i}[z] \).
+	\item Tutte le foglie dell'albero si trovano allo stesso livello.
+	\item Per ogni nodo x
+	\begin{enumerate}
+		\item \( x \neq root[T] \Rightarrow t-1 \leq n[x] \leq 2t - 1 \)
+		\item \( x = root[T] \Rightarrow 1 \leq n[x] \leq 2t - 1 \)
+	\end{enumerate}
+\end{enumerate}
+
 \section{Operazioni}
 \subsection{Inserimento}
 \subsection{Cancellazione}
